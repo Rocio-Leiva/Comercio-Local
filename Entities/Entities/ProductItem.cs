@@ -6,19 +6,18 @@ using System.Threading.Tasks;
 
 namespace Entities.Entities
 {
-    public class ProductItem
+    public class ProductItem 
     {
-        public ProductItem()
+        public ProductItem() 
         {
             IsActive = true;
             IsPublic = true;
         }
         public int Id { get; set; }
         public Guid IdWeb { get; set; }
-
         public string NameProduct { get; set; }
         public string Brand { get; set; }
-
+        public int Weight { get; set; }
         public string Stock { get; set; }
         public DateTime InsertDate { get; set; }
         public DateTime? UpdateDate { get; set; }

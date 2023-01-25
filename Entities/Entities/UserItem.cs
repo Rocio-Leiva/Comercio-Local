@@ -13,15 +13,13 @@ namespace Entities.Entities
         public Guid IdWeb { get; set; }
         public string DNI { get; set; }
         public string Name { get; set; }
-        public string LastName { get; set; }
-        public DateTime BirthDay { get; set; }
+        public int Phone { get; set; }
+        public string Email { get; set; }
         public DateTime InsertDate { get; set; }
         public DateTime UpdateDate { get; set; }
-
         public bool IsActive { get; private set; }
-        public int IdRol { get; set; }
         private string Password { get; set; }
         private string EncryptedPassword { get; set; }
     }
 }
-}
+

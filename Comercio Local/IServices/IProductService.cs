@@ -1,6 +1,10 @@
-﻿namespace Comercio_Local.IServices
+﻿using Entities.Entities;
+
+namespace Comercio_Local.IServices
 {
-    public class IProductService
+    public interface IProductService
     {
+        int InsertProduct(ProductItem productItem);
     }
 }
+

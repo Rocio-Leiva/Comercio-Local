@@ -1,6 +1,9 @@
-﻿namespace Comercio_Local.IServices
+﻿using Entities.Entities;
+
+namespace Comercio_Local.IServices
 {
-    public class IUserService
+    public interface IUserService
     {
+        int InsertUser(UserItem userItem);
     }
 }

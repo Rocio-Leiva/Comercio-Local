@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Entities.Entities
 {
-    internal class AdminItem
+    public class AdminItem : UserItem
     {
+        public AdminItem()
+        {
+            IsActive = true;
+        }
+        public bool IsActive { get; private set; }
+        public int CompanyId { get; set; }
+        public string UserName { get; set; }
     }
 }
