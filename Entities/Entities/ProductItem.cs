@@ -15,6 +15,11 @@ namespace Entities.Entities
         }
         public int Id { get; set; }
         public Guid IdWeb { get; set; }
+
+        public string NameProduct { get; set; }
+        public string Brand { get; set; }
+
+        public string Stock { get; set; }
         public DateTime InsertDate { get; set; }
         public DateTime? UpdateDate { get; set; }
         public bool IsActive { get; private set; }
