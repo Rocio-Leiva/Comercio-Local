@@ -10,7 +10,7 @@ namespace Entities.Entities
     {
         public int Id { get; set; }
         public Guid IdWeb { get; set; }
-        public int ProductId { get; set; }
+        public int ProductNum { get; set; }
         public int Amount { get; set; }
         public DateTime OrderDate { get; set; }
         public DateTime DeliveryDate { get; set; }

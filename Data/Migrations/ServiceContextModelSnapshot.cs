@@ -48,12 +48,15 @@ namespace Data.Migrations
                     b.Property<DateTime>("OrderDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("ProductId")
+                    b.Property<int?>("ProductItemId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductNum")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ProductId");
+                    b.HasIndex("ProductItemId");
 
                     b.ToTable("Orders", (string)null);
                 });
@@ -141,7 +144,7 @@ namespace Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Persons", (string)null);
+                    b.ToTable("Users", (string)null);
 
                     b.UseTptMappingStrategy();
                 });
@@ -150,14 +153,14 @@ namespace Data.Migrations
                 {
                     b.HasBaseType("Entities.Entities.UserItem");
 
-                    b.Property<int>("CompanyId")
+                    b.Property<int>("CompanyNum")
                         .HasColumnType("int");
 
                     b.Property<string>("UserName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.ToTable("Users", (string)null);
+                    b.ToTable("Admins", (string)null);
                 });
 
             modelBuilder.Entity("Entities.Entities.BuyerItem", b =>
@@ -168,23 +171,21 @@ namespace Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("OrderId")
+                    b.Property<int>("OrderNum")
                         .HasColumnType("int");
 
                     b.Property<string>("UserName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.ToTable("Employees", (string)null);
+                    b.ToTable("Buyers", (string)null);
                 });
 
             modelBuilder.Entity("Entities.Entities.OrderItem", b =>
                 {
                     b.HasOne("Entities.Entities.ProductItem", null)
                         .WithMany()
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ProductItemId");
                 });
 
             modelBuilder.Entity("Entities.Entities.AdminItem", b =>

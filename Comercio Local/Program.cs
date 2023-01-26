@@ -16,7 +16,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IOrderService, OrderService>();
-builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IUserService, BuyerService>();
 
 builder.Services.AddScoped<IProductLogic, ProductLogic>();
 builder.Services.AddScoped<IOrderLogic, OrderLogic>();

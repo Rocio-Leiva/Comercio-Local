@@ -21,17 +21,17 @@ namespace Data
             builder.Entity<OrderItem>()
             .ToTable("Orders")
             .HasOne<ProductItem>()
-            .WithMany()
-            .HasForeignKey(o => o.ProductId);
+            .WithMany();
+          //  .HasForeignKey(o => o.ProductNum);
 
             builder.Entity<UserItem>()
-            .ToTable("Persons");
-
-            builder.Entity<AdminItem>()
             .ToTable("Users");
 
+            builder.Entity<AdminItem>()
+            .ToTable("Admins");
+
             builder.Entity<BuyerItem>()
-            .ToTable("Employees");
+            .ToTable("Buyers");
         }
     }
 

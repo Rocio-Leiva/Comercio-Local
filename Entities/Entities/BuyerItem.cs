@@ -14,7 +14,7 @@ namespace Entities.Entities
         }
         public bool IsActive { get; private set; }
         public string UserName { get; set; }
-        public int OrderId { get; set; }
+        public int OrderNum { get; set; }
         public string Adress { get; set; }
     }
 }
