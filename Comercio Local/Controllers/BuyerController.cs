@@ -11,20 +11,17 @@ namespace Comercio_Local.Controllers
     {
         private readonly ILogger<BuyerController> _logger;
         private readonly IBuyerService _buyerService;
-        public BuyerController(ILogger<BuyerController> logger, IBuyerService buyerService, IBuyerService buyerService)
+        public BuyerController(ILogger<BuyerController> logger, IBuyerService buyerService)
         {
             _logger = logger;
             _buyerService = buyerService;
-        }
-        [HttpPost(Name = "InsertBuyer")]
-        public int Post([FromBody] BuyerItem buyer)
-        {
-            return _buyerService.InsertBuyer(buyer);
         }
         [HttpPost(Name = "InsertBuyer")]
         public int Post([FromBody] BuyerItem buyerItem)
         {
             return _buyerService.InsertBuyer(buyerItem);
         }
+      
     }
 }
+

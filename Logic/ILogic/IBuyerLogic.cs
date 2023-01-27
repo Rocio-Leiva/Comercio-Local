@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Logic.ILogic
 {
-    internal class IBuyerLogic
+    public interface IBuyerLogic
     {
         void InsertBuyerItem(BuyerItem buyerItem);
     }

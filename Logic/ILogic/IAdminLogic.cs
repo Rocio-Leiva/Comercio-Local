@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Logic.ILogic
 {
-    internal class IAdminLogic
+    public interface IAdminLogic
     {
         void InsertAdminItem(AdminItem adminItem);
     }

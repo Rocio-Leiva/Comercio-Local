@@ -16,14 +16,12 @@ namespace Comercio_Local.Controllers
             _adminService = adminService;
         }
         [HttpPost(Name = "InsertAdmin")]
-        public int Post([FromBody] AdminItem admin)
+        public int Post([FromBody] AdminItem adminItem)
         {
-            return _adminService.InsertAdmin(admin);
+            return _adminService.InsertAdmin(adminItem);
         }
-        [HttpGet(Name = "GetAdmins")]
-        public List<AdminItem> GetAdmins()
-        {
-            return _adminService.GetAdmins();
-        }
+       
     }
 }
+
+

@@ -4,12 +4,11 @@ using Logic.ILogic;
 
 namespace Comercio_Local.Services
 {
-    public class AdminService
-    {
+
         public class AdminService : IAdminService
         {
             private readonly IAdminLogic _adminLogic;
-            public AdminService(IAdminLogic AdminLogic)
+            public AdminService(IAdminLogic adminLogic)
             {
                 _adminLogic = adminLogic;
             }
@@ -19,5 +18,7 @@ namespace Comercio_Local.Services
                 return adminItem.Id;
             }
         }
-    }
+    
 }
+
+

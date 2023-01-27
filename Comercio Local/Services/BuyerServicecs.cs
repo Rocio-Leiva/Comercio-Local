@@ -1,5 +1,7 @@
 ﻿using Comercio_Local.IServices;
 using Entities.Entities;
+using Logic.ILogic;
+using Logic.Logic;
 
 namespace Comercio_Local.Services
 {
@@ -8,9 +10,9 @@ namespace Comercio_Local.Services
         public class BuyerService : IBuyerService
         {
             private readonly IBuyerLogic _buyerLogic;
-            public BuyerService(IBuyerLogic AdminLogic)
+            public BuyerService(IBuyerLogic BuyerLogic)
             {
-                _buyerLogic = buyerLogic;
+                _buyerLogic = BuyerLogic;
             }
             public int InsertBuyer(BuyerItem buyerItem)
             {
