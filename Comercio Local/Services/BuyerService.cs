@@ -5,8 +5,7 @@ using Logic.Logic;
 
 namespace Comercio_Local.Services
 {
-    public class BuyerServicecs
-    {
+ 
         public class BuyerService : IBuyerService
         {
             private readonly IBuyerLogic _buyerLogic;
@@ -20,5 +19,6 @@ namespace Comercio_Local.Services
                 return buyerItem.Id;
             }
         }
-    }
+    
 }
+
