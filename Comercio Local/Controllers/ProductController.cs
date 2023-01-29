@@ -6,7 +6,7 @@ using System.Xml.Linq;
 namespace Comercio_Local.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/[action]")]
     public class ProductController : ControllerBase
     {
         private readonly ILogger<ProductController> _logger;
@@ -23,7 +23,7 @@ namespace Comercio_Local.Controllers
             return _productService.InsertProduct(productItem);
         }
 
-        [HttpPost(Name = "GetProductItem")]
+        [HttpGet(Name = "GetProductItem")]
         public List<ProductItem> Get()
         {
             return _productService.GetProductItem();

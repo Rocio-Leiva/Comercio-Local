@@ -1,11 +1,12 @@
 ﻿using Comercio_Local.IServices;
 using Entities.Entities;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace Comercio_Local.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller] /[action]")]
     public class AdminController : ControllerBase
     {
         private readonly ILogger<AdminController> _logger;
