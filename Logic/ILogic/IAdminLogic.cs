@@ -10,6 +10,7 @@ namespace Logic.ILogic
     public interface IAdminLogic
     {
         void InsertAdminItem(AdminItem adminItem);
+        List<AdminItem> GetAllAdmins();
     }
    
 }

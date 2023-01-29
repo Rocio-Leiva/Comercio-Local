@@ -18,6 +18,10 @@ namespace Logic.Logic
             _serviceContext.Admins.Add(adminItem);
             _serviceContext.SaveChanges();
         }
+        List<AdminItem> IAdminLogic.GetAllAdmins()
+        {
+            return _serviceContext.Set<AdminItem>().ToList();
+        }
     }
 }
 

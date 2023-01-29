@@ -8,7 +8,7 @@ using System.Xml.Linq;
 namespace Comercio_Local.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/[action]")]
     public class UserController : ControllerBase
     {
         private readonly ILogger<ProductController> _logger;
@@ -24,5 +24,13 @@ namespace Comercio_Local.Controllers
         {
             return _userService.InsertUser(userItem);
         }
+
+        [HttpGet(Name = "GetAllUsers")]
+        public List<UserItem> GetAllUsers()
+        {
+            return _userService.GetAllUsers();
+        }
+
+
     }
 }

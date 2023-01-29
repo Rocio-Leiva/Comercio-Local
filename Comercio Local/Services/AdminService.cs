@@ -17,7 +17,11 @@ namespace Comercio_Local.Services
                 _adminLogic.InsertAdminItem(adminItem);
                 return adminItem.Id;
             }
+             public List<AdminItem> GetAllAdmins()
+        {
+             return _adminLogic.GetAllAdmins();
         }
+    }
     
 }
 

@@ -16,5 +16,9 @@ namespace Comercio_Local.Services
             _userLogic.InsertUserItem(userItem);
             return userItem.Id;
         }
+        public List<UserItem> GetAllUsers()
+        {
+            return _userLogic.GetAllUsers();
+        }
     }
 }

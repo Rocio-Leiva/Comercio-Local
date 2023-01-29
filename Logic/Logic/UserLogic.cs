@@ -17,5 +17,10 @@ namespace Logic.Logic
             _serviceContext.Users.Add(userItem);
             _serviceContext.SaveChanges();
         }
+
+        List<UserItem> IUserLogic.GetAllUsers()
+        {
+            return _serviceContext.Set<UserItem>().ToList();
+        }
     }
 }

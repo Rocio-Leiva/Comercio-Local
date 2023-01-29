@@ -6,7 +6,7 @@ namespace Comercio_Local.IServices
         public interface IAdminService
         {
             int InsertAdmin(AdminItem adminItem);
-
-        }
+            List<AdminItem> GetAllAdmins();
+    }
  }
 

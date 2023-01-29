@@ -18,7 +18,11 @@ namespace Comercio_Local.Services
                 _buyerLogic.InsertBuyerItem(buyerItem);
                 return buyerItem.Id;
             }
+            List<BuyerItem> IBuyerService.GetAllBuyers()
+        {
+            return _buyerLogic.GetAllBuyers();
         }
+    }
     
 }
 

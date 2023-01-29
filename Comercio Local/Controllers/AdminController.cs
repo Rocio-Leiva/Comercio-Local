@@ -21,7 +21,12 @@ namespace Comercio_Local.Controllers
         {
             return _adminService.InsertAdmin(adminItem);
         }
-       
+
+        [HttpGet(Name = "GetAllAdmins")]
+        public List<AdminItem> GetAllAdmins()
+        {
+            return _adminService.GetAllAdmins();
+        }
     }
 }
 

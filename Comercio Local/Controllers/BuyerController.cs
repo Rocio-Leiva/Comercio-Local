@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Comercio_Local.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/[action]")]
     public class BuyerController : ControllerBase
     {
         private readonly ILogger<BuyerController> _logger;
@@ -21,7 +21,13 @@ namespace Comercio_Local.Controllers
         {
             return _buyerService.InsertBuyer(buyerItem);
         }
-      
+
+        [HttpGet(Name = "GetAllBuyers")]
+
+        public List<BuyerItem> GetAllBuyers()
+        {
+            return _buyerService.GetAllBuyers();
+        }
     }
 }
 

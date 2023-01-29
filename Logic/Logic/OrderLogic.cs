@@ -17,5 +17,9 @@ namespace Logic.Logic
             _serviceContext.Orders.Add(orderItem);
             _serviceContext.SaveChanges();
         }
+        List<OrderItem> IOrderLogic.GetAllOrders()
+        {
+            return _serviceContext.Set<OrderItem>().ToList();
+        }
     }
 }

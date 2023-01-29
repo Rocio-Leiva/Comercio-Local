@@ -5,5 +5,6 @@ namespace Comercio_Local.IServices
     public interface IUserService
     {
         int InsertUser(UserItem userItem);
+        List<UserItem> GetAllUsers();
     }
 }

@@ -16,5 +16,9 @@ namespace Comercio_Local.Services
             _orderLogic.InsertOrderItem(orderItem);
             return orderItem.Id;
         }
+        public List<OrderItem> GetAllOrders()
+        {
+            return _orderLogic.GetAllOrders();
+        }
     }
 }
