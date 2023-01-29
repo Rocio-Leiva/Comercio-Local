@@ -9,13 +9,10 @@ using System.Threading.Tasks;
 
 namespace Logic.Logic
 {
-    public class ProductLogic : BaseContextLogic, IProductLogic
+    public interface ProductLogic 
     {
-        public ProductLogic(ServiceContext serviceContext) : base(serviceContext) { }
-        public void InsertProductItem(ProductItem productItem)
-        {
-            _serviceContext.Products.Add(productItem);
-            _serviceContext.SaveChanges();
-        }
+        void InsertProductItem(ProductItem productItem);
+        List<ProductItem> GetProductItem();
+       
     }
 }

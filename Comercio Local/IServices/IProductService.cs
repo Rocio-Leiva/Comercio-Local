@@ -4,7 +4,8 @@ namespace Comercio_Local.IServices
 {
     public interface IProductService
     {
-        int InsertProduct(ProductItem productItem);
+       int InsertProduct(ProductItem productItem);
+       List<ProductItem> GetProductItem();
     }
 }
 

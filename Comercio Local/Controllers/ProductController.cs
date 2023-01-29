@@ -22,5 +22,12 @@ namespace Comercio_Local.Controllers
         {
             return _productService.InsertProduct(productItem);
         }
+
+        [HttpPost(Name = "GetProductItem")]
+        public List<ProductItem> Get()
+        {
+            return _productService.GetProductItem();
+        }
+
     }
 }

@@ -9,6 +9,7 @@ namespace Logic.ILogic
 {
     public interface IProductLogic
     {
+        void GetProductItem(ProductItem productItem);
         void InsertProductItem(ProductItem productItem);
     }
 }

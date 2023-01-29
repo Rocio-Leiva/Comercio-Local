@@ -16,6 +16,16 @@ namespace Comercio_Local.Services
             _productLogic.InsertProductItem(productItem);
             return productItem.Id;
         }
+
+         public List<ProductItem> GetProductItem() 
+         {
+            //var resultList = _productLogic.GetProductItem();
+            // return resultList;
+
+            return _productLogic.GetProductItem();
+
+        }
+
     }
 }
 
