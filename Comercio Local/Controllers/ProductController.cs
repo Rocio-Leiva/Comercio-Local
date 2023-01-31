@@ -29,5 +29,13 @@ namespace Comercio_Local.Controllers
             return _productService.GetProductItem();
         }
 
+
+        [HttpDelete(Name = "DeleteProductItem")]
+
+        public void DeleteProductItem([FromQuery] int id)
+        {
+            _productService.DeleteProductItem(id);
+        }
+
     }
 }

@@ -19,13 +19,14 @@ namespace Comercio_Local.Services
 
          public List<ProductItem> GetProductItem() 
          {
-            //var resultList = _productLogic.GetProductItem();
-            // return resultList;
-
-            return _productLogic.GetProductItem();
+          return _productLogic.GetProductItem();
 
         }
 
+        void IProductService.DeleteProductItem(int id)
+        {
+            _productLogic.DeleteProductItem(id);
+        }
     }
 }
 

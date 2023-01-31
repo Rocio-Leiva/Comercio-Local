@@ -1,6 +1,7 @@
 ﻿using Comercio_Local.IServices;
 using Entities.Entities;
 using Logic.ILogic;
+using Logic.Logic;
 
 namespace Comercio_Local.Services
 {
@@ -20,5 +21,10 @@ namespace Comercio_Local.Services
         {
             return _userLogic.GetAllUsers();
         }
+        void IUserService.DeleteUserItem(int id)
+        {
+            _userLogic.DeleteUserItem(id);
+        }
+
     }
 }

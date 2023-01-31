@@ -22,5 +22,14 @@ namespace Logic.Logic
         {
             return _serviceContext.Set<UserItem>().ToList();
         }
+        void IUserLogic.DeleteUserItem(int id)
+        {
+
+            _serviceContext.Users.Remove(_serviceContext.Set<UserItem>().Where(i => i.Id == id).First());
+
+            _serviceContext.SaveChanges();
+
+        }
+
     }
 }

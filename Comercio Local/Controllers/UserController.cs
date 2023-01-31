@@ -1,6 +1,7 @@
 ﻿
 using Comercio_Local.Controllers;
 using Comercio_Local.IServices;
+using Comercio_Local.Services;
 using Entities.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System.Xml.Linq;
@@ -31,6 +32,11 @@ namespace Comercio_Local.Controllers
             return _userService.GetAllUsers();
         }
 
+        [HttpDelete(Name = "DeleteUsertem")]
+        public void DeleteUserItem([FromQuery] int id)
+        {
+            _userService.DeleteUserItem(id);
+        }
 
     }
 }

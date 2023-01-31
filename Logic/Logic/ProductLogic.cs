@@ -11,7 +11,7 @@ namespace Logic.Logic
 {
     public class ProductLogic : BaseContextLogic, IProductLogic
     {
-       public ProductLogic(ServiceContext serviceContext) : base(serviceContext) { }
+        public ProductLogic(ServiceContext serviceContext) : base(serviceContext) { }
         public void InsertProductItem(ProductItem productItem)
         {
             _serviceContext.Products.Add(productItem);
@@ -21,9 +21,17 @@ namespace Logic.Logic
         public List<ProductItem> GetProductItem()
         {
             return _serviceContext.Set<ProductItem>().ToList();
-           
+
+        }
+
+        void IProductLogic.DeleteProductItem(int id)
+        {
+         
+            _serviceContext.Products.Remove(_serviceContext.Set<ProductItem>().Where(i => i.Id == id).First());
+
+            _serviceContext.SaveChanges();
+
         }
 
     }
-
 }
