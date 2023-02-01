@@ -22,10 +22,18 @@ namespace Logic.Logic
         {
             return _serviceContext.Set<UserItem>().ToList();
         }
-        void IUserLogic.DeleteUserItem(int id)
+        public void DeleteUserItem(int id)
         {
 
             _serviceContext.Users.Remove(_serviceContext.Set<UserItem>().Where(i => i.Id == id).First());
+
+            _serviceContext.SaveChanges();
+
+        }
+        public void UpdateUser(UserItem userItem)
+        {
+
+            _serviceContext.Users.Update(userItem);
 
             _serviceContext.SaveChanges();
 

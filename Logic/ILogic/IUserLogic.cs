@@ -13,5 +13,6 @@ namespace Logic.ILogic
         List<UserItem> GetAllUsers();
         void DeleteUserItem(int id);
 
+        void UpdateUser(UserItem userItem);
     }
 }

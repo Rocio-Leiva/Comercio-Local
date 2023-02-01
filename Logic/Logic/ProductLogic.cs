@@ -24,7 +24,7 @@ namespace Logic.Logic
 
         }
 
-        void IProductLogic.DeleteProductItem(int id)
+     public void DeleteProductItem(int id)
         {
          
             _serviceContext.Products.Remove(_serviceContext.Set<ProductItem>().Where(i => i.Id == id).First());

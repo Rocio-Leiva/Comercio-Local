@@ -4,6 +4,7 @@ using Comercio_Local.IServices;
 using Comercio_Local.Services;
 using Entities.Entities;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Authentication;
 using System.Xml.Linq;
 
 namespace Comercio_Local.Controllers
@@ -38,5 +39,14 @@ namespace Comercio_Local.Controllers
             _userService.DeleteUserItem(id);
         }
 
+        [HttpPatch(Name = "ModifyUser")]
+        public void Patch([FromBody] UserItem userItem)
+        {
+
+            {
+                _userService.UpdateUser(userItem);
+            }
+
+        }
     }
 }

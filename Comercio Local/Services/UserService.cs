@@ -21,10 +21,14 @@ namespace Comercio_Local.Services
         {
             return _userLogic.GetAllUsers();
         }
-        void IUserService.DeleteUserItem(int id)
+       public void DeleteUserItem(int id)
         {
             _userLogic.DeleteUserItem(id);
         }
 
+        public void UpdateUser(UserItem userItem)
+        {
+            _userLogic.UpdateUser(userItem);
+        }
     }
 }

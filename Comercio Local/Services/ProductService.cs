@@ -23,7 +23,7 @@ namespace Comercio_Local.Services
 
         }
 
-        void IProductService.DeleteProductItem(int id)
+       public void DeleteProductItem(int id)
         {
             _productLogic.DeleteProductItem(id);
         }
