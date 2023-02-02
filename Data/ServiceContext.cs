@@ -19,26 +19,26 @@ namespace Data
             .ToTable("Products");
 
             builder.Entity<OrderItem>()
-            .ToTable("Orders")
-            .HasOne<ProductItem>()
-            .WithMany()
-            .HasForeignKey(o => o.ProductNum);
+            .ToTable("Orders");
+            //.HasOne<ProductItem>()
+            //.WithMany()
+            //.HasForeignKey(o => o.ProductNum);
 
             builder.Entity<UserItem>()
             .ToTable("Users");
 
             builder.Entity<AdminItem>()
-            .ToTable("Admins")
-            .HasOne<AdminItem>()
-            .WithMany()
-            .HasForeignKey(o => o.IdUser)
-            .HasIndex(c => c.IdUser).IsUnique();
+            .ToTable("Admins");
+            //.HasOne<AdminItem>()
+            //.WithMany()
+            //.HasForeignKey(o => o.IdUser)
+            //.HasIndex(c => c.IdUser).IsUnique();
 
             builder.Entity<BuyerItem>()
-            .ToTable("Buyers")
-            .HasOne<BuyerItem>()
-            .WithMany()
-            .HasForeignKey(o => o.IdUser);
+            .ToTable("Buyers");
+            //.HasOne<BuyerItem>()
+            //.WithMany()
+            //.HasForeignKey(o => o.IdUser);
             //.HasIndex(c => c.IdUser).IsUnique();
         }
     }
