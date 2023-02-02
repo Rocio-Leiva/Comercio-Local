@@ -6,5 +6,7 @@ namespace Comercio_Local.IServices
     {
         int InsertOrder(OrderItem orderItem);
         List<OrderItem> GetAllOrders();
+        void DeleteOrderItem(int id);
+        void UpdateOrder(OrderItem orderItem);
     }
 }

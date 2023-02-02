@@ -27,6 +27,23 @@ namespace Comercio_Local.Controllers
         {
             return _adminService.GetAllAdmins();
         }
+       
+        [HttpDelete(Name = "DeleteAdminItem")]
+        public void DeleteAdminItem([FromQuery] int id)
+        {
+            _adminService.DeleteAdminItem(id);
+        }
+
+        [HttpPatch(Name = "ModifyAdmin")]
+        public void Patch([FromBody] AdminItem adminItem)
+        {
+
+            
+           _adminService.UpdateAdmin(adminItem);
+            
+
+        }
+
     }
 }
 

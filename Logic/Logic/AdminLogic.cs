@@ -22,6 +22,23 @@ namespace Logic.Logic
         {
             return _serviceContext.Set<AdminItem>().ToList();
         }
+
+        public void DeleteAdminItem(int id)
+        {
+
+            _serviceContext.Admins.Remove(_serviceContext.Set<AdminItem>().Where(i => i.Id == id).First());
+
+            _serviceContext.SaveChanges();
+
+        }
+        public void UpdateAdmin(AdminItem adminItem)
+        {
+
+            _serviceContext.Admins.Update(adminItem);
+
+            _serviceContext.SaveChanges();
+
+        }
     }
 }
 

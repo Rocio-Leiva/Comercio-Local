@@ -1,4 +1,5 @@
 ﻿using Comercio_Local.IServices;
+using Comercio_Local.Services;
 using Entities.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System.Xml.Linq;
@@ -36,6 +37,10 @@ namespace Comercio_Local.Controllers
         {
             _productService.DeleteProductItem(id);
         }
-
+        [HttpPatch(Name = "ModifyOrder")]
+        public void Patch([FromBody] ProductItem productItem)
+        {
+            _productService.UpdateProduct(productItem);
+        }
     }
 }

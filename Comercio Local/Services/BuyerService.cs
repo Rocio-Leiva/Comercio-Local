@@ -19,9 +19,18 @@ namespace Comercio_Local.Services
                 return buyerItem.Id;
             }
             List<BuyerItem> IBuyerService.GetAllBuyers()
-        {
+            {
             return _buyerLogic.GetAllBuyers();
-        }
+            }
+            public void DeleteBuyerItem(int id)
+            {
+            _buyerLogic.DeleteBuyerItem(id);
+            }
+
+            public void UpdateBuyer(BuyerItem buyerItem)
+            {
+            _buyerLogic.UpdateBuyer(buyerItem);
+            }
     }
     
 }

@@ -11,5 +11,7 @@ namespace Logic.ILogic
     {
         void InsertBuyerItem(BuyerItem buyerItem);
         List<BuyerItem> GetAllBuyers();
+        void DeleteBuyerItem(int id);
+        void UpdateBuyer(BuyerItem buyerItem);
     }
 }

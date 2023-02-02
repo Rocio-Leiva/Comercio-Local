@@ -28,6 +28,19 @@ namespace Comercio_Local.Controllers
         {
             return _buyerService.GetAllBuyers();
         }
+
+        [HttpDelete(Name = "DeleteBuyerItem")]
+        public void DeleteBuyerItem([FromQuery] int id)
+        {
+            _buyerService.DeleteBuyerItem(id);
+        }
+
+        [HttpPatch(Name = "ModifyBuyer")]
+        public void Patch([FromBody] BuyerItem buyerItem)
+        {
+             _buyerService.UpdateBuyer(buyerItem);
+        }
+    
     }
 }
 

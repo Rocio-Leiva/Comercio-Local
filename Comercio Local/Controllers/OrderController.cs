@@ -1,4 +1,5 @@
 ﻿using Comercio_Local.IServices;
+using Comercio_Local.Services;
 using Entities.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System.Xml.Linq;
@@ -28,6 +29,18 @@ namespace Comercio_Local.Controllers
         public List<OrderItem> GetAllOrders()
         {
             return _orderService.GetAllOrders();
+        }
+        
+        [HttpDelete(Name = "DeleteOrderItem")]
+        public void DeleteOrderItem([FromQuery] int id)
+        {
+            _orderService.DeleteOrderItem(id);
+        }
+
+        [HttpPatch(Name = "ModifyOrder")]
+        public void Patch([FromBody] OrderItem orderItem)
+        {
+            _orderService.UpdateOrder(orderItem);
         }
 
     }

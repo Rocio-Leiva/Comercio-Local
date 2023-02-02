@@ -11,6 +11,9 @@ namespace Logic.ILogic
     {
         void InsertAdminItem(AdminItem adminItem);
         List<AdminItem> GetAllAdmins();
+        void DeleteAdminItem(int id);
+        void UpdateAdmin(AdminItem adminItem);
+
     }
    
 }

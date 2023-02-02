@@ -17,10 +17,20 @@ namespace Comercio_Local.Services
                 _adminLogic.InsertAdminItem(adminItem);
                 return adminItem.Id;
             }
-             public List<AdminItem> GetAllAdmins()
-        {
+            public List<AdminItem> GetAllAdmins()
+            {
              return _adminLogic.GetAllAdmins();
-        }
+            }
+
+             public void DeleteAdminItem(int id)
+             {
+                  _adminLogic.DeleteAdminItem(id);
+             }
+
+             public void UpdateAdmin(AdminItem adminItem)
+             {
+                 _adminLogic.UpdateAdmin(adminItem);
+             }
     }
     
 }

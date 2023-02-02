@@ -22,6 +22,22 @@ namespace Logic.Logic
         {
             return _serviceContext.Set<BuyerItem>().ToList();
         }
+        public void DeleteBuyerItem(int id)
+        {
+
+            _serviceContext.Buyers.Remove(_serviceContext.Set<BuyerItem>().Where(i => i.Id == id).First());
+
+            _serviceContext.SaveChanges();
+
+        }
+        public void UpdateBuyer(BuyerItem buyerItem)
+        {
+
+            _serviceContext.Buyers.Update(buyerItem);
+
+            _serviceContext.SaveChanges();
+
+        }
     }
 }
 

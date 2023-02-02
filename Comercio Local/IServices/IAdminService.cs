@@ -7,6 +7,8 @@ namespace Comercio_Local.IServices
         {
             int InsertAdmin(AdminItem adminItem);
             List<AdminItem> GetAllAdmins();
+            void DeleteAdminItem(int id);
+            void UpdateAdmin(AdminItem adminItem);
     }
  }
 

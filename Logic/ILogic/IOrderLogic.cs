@@ -11,5 +11,8 @@ namespace Logic.ILogic
     {
         void InsertOrderItem(OrderItem orderItem);
         List<OrderItem> GetAllOrders();
+        void DeleteOrderItem(int id);
+        void UpdateOrder(OrderItem orderItem);
+
     }
 }

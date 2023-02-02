@@ -7,6 +7,7 @@ namespace Comercio_Local.IServices
     {
         int InsertBuyer(BuyerItem buyerItem);
         List<BuyerItem> GetAllBuyers();
-
+        void DeleteBuyerItem(int id);
+        void UpdateBuyer(BuyerItem buyerItem);
     }
 }
