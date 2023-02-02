@@ -31,8 +31,8 @@ namespace Data
             .ToTable("Admins")
             .HasOne<AdminItem>()
             .WithMany()
-            .HasForeignKey(o => o.IdUser);
-            //.HasIndex(c => c.IdUser).IsUnique();
+            .HasForeignKey(o => o.IdUser)
+            .HasIndex(c => c.IdUser).IsUnique();
 
             builder.Entity<BuyerItem>()
             .ToTable("Buyers")
