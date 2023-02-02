@@ -28,10 +28,18 @@ namespace Data
             .ToTable("Users");
 
             builder.Entity<AdminItem>()
-            .ToTable("Admins");
+            .ToTable("Admins")
+            .HasOne<AdminItem>()
+            .WithMany()
+            .HasForeignKey(o => o.IdUser);
+            //.HasIndex(c => c.IdUser).IsUnique();
 
             builder.Entity<BuyerItem>()
-            .ToTable("Buyers");
+            .ToTable("Buyers")
+            .HasOne<BuyerItem>()
+            .WithMany()
+            .HasForeignKey(o => o.IdUser);
+            //.HasIndex(c => c.IdUser).IsUnique();
         }
     }
 

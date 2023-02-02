@@ -13,6 +13,7 @@ namespace Entities.Entities
             IsActive = true;
         }
         public bool IsActive { get; private set; }
+        public int IdUser { get; set; }
         public string UserName { get; set; }
         public int OrderNum { get; set; }
         public string Adress { get; set; }

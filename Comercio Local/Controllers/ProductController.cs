@@ -37,7 +37,7 @@ namespace Comercio_Local.Controllers
         {
             _productService.DeleteProductItem(id);
         }
-        [HttpPatch(Name = "ModifyOrder")]
+        [HttpPatch(Name = "ModifyProduct")]
         public void Patch([FromBody] ProductItem productItem)
         {
             _productService.UpdateProduct(productItem);
