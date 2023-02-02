@@ -48,15 +48,12 @@ namespace Data.Migrations
                     b.Property<DateTime>("OrderDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("ProductItemId")
-                        .HasColumnType("int");
-
                     b.Property<int>("ProductNum")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ProductItemId");
+                    b.HasIndex("ProductNum");
 
                     b.ToTable("Orders", (string)null);
                 });
@@ -185,7 +182,9 @@ namespace Data.Migrations
                 {
                     b.HasOne("Entities.Entities.ProductItem", null)
                         .WithMany()
-                        .HasForeignKey("ProductItemId");
+                        .HasForeignKey("ProductNum")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Entities.Entities.AdminItem", b =>
